@@ -1,15 +1,6 @@
-name: welcome
-
+name: Post welcome comment
 on:
-  push:
-
-jobs:
-  new-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout code
-        uses: actions/checkout@v2
-
-      - name: Print
-        run: |
-          echo "Hello Harsha"
+  pull_request:
+    types: [opened]
+permissions:
+  pull-requests: write
